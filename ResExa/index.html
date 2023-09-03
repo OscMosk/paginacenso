@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/util.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container text-center">
+        <div class="row">
+            <div>
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+            </div>
+            <h1>
+                <div class="col-sm-12">CENSO DE LA POBLACIÓN EL PROGRESO</div>
+            </h1>
+
+            <div class="col-sm-12">y sus Municipios</div>
+            <div class="row m-5">
+                <div class="col-sm-12 col-md-12">
+                    <div class="input-group">
+
+                        <select id="cmbUbicacion" class="form-select "
+                            style="background-color: var(--bs-info-bg-subtle)"
+                            aria-label="Example select with button addon">
+                            <option value="999">Seleccione el Municipio</option>
+                            <option value="201">Guastatoya</option>
+                            <option value="202">Morazan</option>
+                            <option value="203">San Agustin Acasaguastlan</option>
+                            <option value="204">San Cristobal Acasaguastlan</option>
+                            <option value="205">El Jicaro</option>
+                            <option value="206">Sansare</option>
+                            <option value="207">Sanarate</option>
+                            <option value="208">San Antonio</option>
+                        </select>
+                        <button class="btn btn-dark" type="button" onclick="GetDataMuni();">Buscar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header text-bg-danger p-3" style="background-color: blue;">
+                            Poblacion Total sexo
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-4">hombres</div>
+                                <div class="col-sm-4" id="NumHombres">###</div>
+                                <div class="col-sm-4" id="PorHombres">%%</div>
+                                <div class="col-sm-4">Mujeres</div>
+                                <div class="col-sm-4" id="NumMujeres">###</div>
+                                <div class="col-sm-4" id="PorMujres">%%</div>
+                            </div>
+                            <div id="piechart" style="width: 500px; height: 300px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header text-bg-warning p-3">
+                            Poblacion por area
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-4">Aréa Urbana</div>
+                                <div class="col-sm-4" id="NumHombresarea">###</div>
+                                <div class="col-sm-4" id="PorHombresarea">%%</div>
+                                <div class="col-sm-4">Aréa Rural</div>
+                                <div class="col-sm-4" id="NumMujeresarea">###</div>
+                                <div class="col-sm-4" id="PorMujresarea">%%</div>
+                            </div>
+                            <div id="Comunidad" style="width: 500px; height: 300px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header text-bg-success p-3">
+                            Poblacion por Comunidad
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-4 text-bg-primary p-3 text-center">Maya</div>
+                                <div class="col-sm-4 " id="ComuMaya">###</div>
+                                <img class="col-sm-4" src="/imagen/maya.jpeg" style="width: 100px; height: 100px;">
+                                <div class="col-sm-4 text-bg-primary p-3">Garifona</div>
+                                <div class="col-sm-4" id="ComuGarifona">###</div>
+                                <img class="col-sm-4" src="/imagen/garifano.jpeg" style="width: 100px; height: 100px;">
+                                <div class="col-sm-4 text-bg-primary p-3">Xinca</div>
+                                <div class="col-sm-4" id="ComuXinca">###</div>
+                                <img class="col-sm-4" src="/imagen/xinca.jpeg" style="width: 100px; height: 100px;">
+                                <div class="col-sm-4 text-bg-primary p-3">Ladina</div>
+                                <div class="col-sm-4" id="ComuLadina">###</div>
+                                <img class="col-sm-4" src="/imagen/images (1).jpeg"
+                                    style="width: 100px; height: 100px;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
